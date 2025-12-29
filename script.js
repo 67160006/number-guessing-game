@@ -1,4 +1,13 @@
 // filepath: script.js 
+// ...existing code... 
+
+// เพิ่มการ select text เมื ่อคลิก input 
+document.addEventListener("DOMContentLoaded", function () {
+    const guessInput = document.getElementById("guessInput");
+    guessInput.addEventListener("focus", function () {
+        this.select();
+    });
+});
 
 // ตัวแปรเก็บตัวเลขลับ 
 let secretNumber = 0;
