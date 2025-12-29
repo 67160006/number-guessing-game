@@ -1,5 +1,12 @@
 // filepath: script.js
 // ...existing code...
+// ตัวแปรนับจํานวนครั้งที่ทาย
+let attemptCount = 0;
+// ฟังก์ชันอัปเดตจํานวนครั้ง
+function updateDisplay() {
+  const attemptsContainer = document.getElementById("attemptsContainer");
+  attemptsContainer.textContent = `ทายแล้ว: ${attemptCount} ครั้ง`;
+}
 // ฟังก์ชันตรวจสอบการทาย
 function checkGuess() {
   const guessInput = document.getElementById("guessInput");
@@ -24,6 +31,14 @@ function checkGuess() {
     return;
   }
   attemptCount++;
+  if (guessValue === secretNumber) {
+    resultContainer.innerHTML = `
+ <div class="alert alert-success" role="alert">
+ <h5>✓ ถูกต้อง!</h5>
+ <p>คุณทายถูกในครั้งที่ ${attemptCount}</p>
+ </div>
+ `;
+  }
   if (guessValue === secretNumber) {
     resultContainer.innerHTML = `
  <div class="alert alert-success" role="alert">
