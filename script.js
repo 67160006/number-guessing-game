@@ -53,6 +53,9 @@ function updateDisplay() {
     attemptsContainer.textContent = `ทายแล้ว: ${attemptCount} ครั ้ง`;
 }
 
+// filepath: script.js 
+// ...existing code... 
+
 // ฟังก์ชันเริ่มเกมใหม่ 
 function resetGame() {
     initializeGame();
@@ -60,6 +63,8 @@ function resetGame() {
     document.getElementById("guessInput").value = "";
     document.getElementById("guessInput").focus();
 }
+
+// ...existing code... 
 
 // เริ่มเกมเมื ่อโหลดหน้า 
 window.addEventListener("load", initializeGame);
